@@ -61,7 +61,7 @@ function onFetchError(error) {
     {
       width: '500px',
       position: 'left-top',
-      timeout: '4000',
+      timeout: '3000',
       fontSize: '20px',
     }
   );
