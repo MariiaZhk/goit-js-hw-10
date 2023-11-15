@@ -62,6 +62,7 @@ img {
 }
 
 .breed-select {
+  display: none;
   max-width: 440px;
   margin: 20px;
   border-color: #4c4d4d;

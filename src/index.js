@@ -40,11 +40,11 @@ function onSelectBreedElChange(event) {
 
   fetchCatByBreed(breedId)
     .then(breedsIdArr => {
-      refs.loaderEl.classList.replace('loader', 'is-hidden');
       const { url, breeds } = breedsIdArr[0];
 
       refs.containerCatInfoEl.innerHTML = `<div class="img-container"><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="description-container"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><strong>Temperament:</strong> ${breeds[0].temperament}</p></div>`;
 
+      refs.loaderEl.classList.replace('loader', 'is-hidden');
       refs.selectBreedEl.classList.remove('is-hidden');
       refs.containerCatInfoEl.classList.remove('is-hidden');
     })
