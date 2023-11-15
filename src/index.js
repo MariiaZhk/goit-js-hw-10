@@ -60,8 +60,7 @@ function onFetchError(error) {
     'Oops! Something went wrong! Try reloading the page or select another cat breed!',
     {
       width: '500px',
-      position: 'left-top',
-      timeout: '3000',
+      position: 'center-top',
       fontSize: '20px',
     }
   );
