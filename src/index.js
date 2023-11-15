@@ -53,11 +53,16 @@ function onSelectBreedElChange(event) {
 }
 
 function onFetchError(error) {
-  refs.selectBreedEl.classList.remove('is-hidden');
+  refs.selectBreedEl.classList.add('is-hidden');
   refs.loaderEl.classList.replace('loader', 'is-hidden');
 
   Notify.failure(
     'Oops! Something went wrong! Try reloading the page or select another cat breed!',
-    { position: 'center-center' }
+    {
+      width: '500px',
+      position: 'left-top',
+      timeout: '5000',
+      fontSize: '20px',
+    }
   );
 }
