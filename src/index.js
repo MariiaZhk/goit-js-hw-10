@@ -53,7 +53,7 @@ function onSelectBreedElChange(event) {
 }
 
 function onFetchError(error) {
-  refs.selectBreedEl.classList.add('is-hidden');
+  refs.selectBreedEl.classList.remove('is-hidden');
   refs.loaderEl.classList.replace('loader', 'is-hidden');
 
   Notify.failure(
@@ -61,7 +61,7 @@ function onFetchError(error) {
     {
       width: '500px',
       position: 'left-top',
-      timeout: '5000',
+      timeout: '4000',
       fontSize: '20px',
     }
   );
