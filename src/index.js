@@ -1,6 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import SlimSelect from 'slim-select';
-import 'slim-select/dist/slimselect.css';
+import '../node_modules/slim-select/dist/slimselect.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import './styles.css';
 
