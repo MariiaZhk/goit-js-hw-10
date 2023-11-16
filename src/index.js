@@ -11,7 +11,7 @@ const refs = {
   containerCatInfoEl: document.querySelector('.cat-info'),
 };
 
-refs.loaderEl.classList.replace('loader', 'is-hidden');
+refs.selectBreedEl.classList.add('is-hidden');
 refs.errorEl.classList.add('is-hidden');
 refs.containerCatInfoEl.classList.add('is-hidden');
 
@@ -24,8 +24,12 @@ fetchBreeds()
     data.forEach(element => {
       breedsIdArr.push({ text: element.name, value: element.id });
     });
+
+    refs.loaderEl.classList.replace('loader', 'is-hidden');
+    refs.selectBreedEl.classList.remove('is-hidden');
+
     new SlimSelect({
-      select: refs.selectBreedEl,
+      select: '.breed-select',
       data: breedsIdArr,
     });
   })
